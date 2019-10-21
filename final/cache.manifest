@@ -1,0 +1,31 @@
+CACHE MANIFEST
+# version - 140120-15:41:17
+
+CACHE:
+
+# CSS
+#order does not matter
+css-normalize.css
+css-add2home.css
+css-main.css
+
+# IMAGES
+  img/face-icon-152x152.png
+  img/face-icon-144x144.png
+    img/face-icon-76x76.png
+    img/face-icon-72x72.png
+    img/face-icon-180x180.png
+    img/face-icon-114x114.png
+    img/face-icon-57x57.png
+
+# HTML FILES
+index.html
+
+# JAVASCRIPT - SPECIFIC ORDER
+js-refresh-manifest.js
+js-add2home.js
+js-main.js
+
+## Any resources not listed above will require the user to be online.
+NETWORK:
+*

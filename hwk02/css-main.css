@@ -1,0 +1,68 @@
+body {
+	background-color:#B1D1E1;
+	height: 100vh;
+}
+
+#content {
+	width: 90vw;
+	margin: 10px auto;
+}
+
+#sun {
+	/* width: 100px;
+	height: 100px; */
+	margin: 90px auto 10px;
+	background:url(img/face_smile.svg);
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+}
+
+#output {
+	text-align: center;
+}
+
+@media only screen and (orientation:portrait) {
+	body {
+		background: rgb(171,229,255);
+		background: linear-gradient(180deg, rgba(171,229,255,1) 0%, rgb(252, 219, 35) 100%);
+		background-repeat: no-repeat;
+		background-size: cover;
+	}
+
+	#sun {
+		width: 80vw;
+		height: 80vw;
+		margin: 90px auto 10px;
+		background:url(img/noun_sun_2242288.svg);
+		background-repeat: no-repeat;
+		background-size: cover;
+		background-position: center;
+	}
+
+	#output:after {
+		content: 'SUNRISE';
+	}
+}
+
+	@media only screen and (orientation:landscape) {
+		body {
+			background: rgb(247,189,42);
+			background: linear-gradient(180deg, rgba(247,189,42,1) 0%, rgba(251,70,247,1) 100%);		}
+	
+		#sun {
+			height: 80vh;
+			width: 70vw;
+			margin: 40px auto 10px;
+			background:url(img/noun_sunset_1770495.svg);
+			background-repeat: no-repeat;
+			background-size: cover;
+			background-position: center;
+		}
+	
+		#output:after {
+			content: 'SUNSET';
+		}
+
+
+}
