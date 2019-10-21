@@ -27,8 +27,34 @@ h1 {
     color: white;
 }
 
+h2 {
+    font-size: 1rem;
+    margin: 0;
+    font-family: 'svboldregular';
+    color: white;
+}
+
 h3 {
     font-size: 1.5rem;
+    margin: 0;
+    font-family: 'svthinregular';
+}
+
+h4 {
+    font-size: 1.25rem;
+    margin: 0;
+    font-family: 'svthinregular'; 
+}
+
+h5 {
+    font-size: 1.125rem;
+    margin: 0 auto;
+    font-family: 'svboldregular'; 
+    color: #6b4028;
+}
+
+p {
+    font-size: 1rem;
     margin: 0;
     font-family: 'svthinregular';
 }
@@ -86,11 +112,15 @@ header {
     width: 90%;
     text-align: center;
     /* margin-top: 1.875rem; */
-    background-color: lightgrey;
+    background-color: #FFD284;
     margin: 1.875rem auto 0;
     /* background: url(); */
   }
-  
+
+    .inactive {
+      color: #895D3A;
+    }
+
   #nav-overlay-content a {
     padding: .5rem;
     text-decoration: none;
@@ -101,14 +131,12 @@ header {
     font-family: 'svboldregular';
   }
 
-  .hidden {
-      color: #895D3A;
-  }
+
   
-  .overlay a:hover, .overlay a:focus {
+  /* .overlay a:hover, .overlay a:focus {
     color: #355C7D;
   }
-  
+   */
   .overlay .closebtn {
     font: bold 7rem 'bebas-neue-by-fontfabric', sans-serif;
     color: #F67280;
@@ -184,4 +212,62 @@ footer {
 
 #footer-img {
     width: 320px;
+}
+
+/* TEMPLATE */
+
+#template-info-container {
+    width: 272px;
+    height: 180px;
+    background:url(img/template-icon.png);
+}
+
+.template-item-img {
+    position: relative;
+    top: 1.3rem;
+    left: 1.1rem;
+}
+
+#template-item-text {
+    margin-left: 5.8rem;
+    display: flex;
+    flex-direction: column;
+    bottom: 1.6rem;
+    position: relative;
+    /* justify-content: space-between; */
+}
+
+#template-description {
+    width: 230px;
+    margin: 0 auto;
+
+}
+
+#step1, #step2 {
+ margin-top: 1rem;
+}
+
+#calculate {
+    background: url(img/calculate.png);
+    width: 267px;
+    height: 62px;
+    border: 0;
+    color: transparent;
+}
+
+#result-container {
+    background: url(img/big-text.png);
+    width: 267px;
+    height: 172px;
+    margin-top: 3rem;
+    padding: 2rem;
+}
+
+/* Settings */
+
+#setting-container {
+    background-color: #FFD284;
+    width: 267px;
+    height: 372px;
+    margin: 3rem auto;
 }
