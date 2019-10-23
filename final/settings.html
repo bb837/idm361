@@ -2,37 +2,61 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0", user-scalable="no">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     
     <link rel="stylesheet" href="normalize.css">
     <link rel="stylesheet" href="master.css">
 
-    <title></title>
+    <title>Settings</title>
 </head>
 <body id="top">
     <header class="index-header">
-            <img src="img/cancel.png" alt="X" id="cancel">
+            <img id="back-arrow" src="img/back-arrow.png" alt="back-arrow">
             <img src="img/logo.png" alt="Stardew Valley Calculator" id="logo">
             <img id="nav-icon" src="img/nav.png" alt="hamburger">
-            
-            <div id="overlay">
+        </header> 
+        
+        <div id="overlay">
+                <img src="img/cancel.png" alt="X" id="cancel">
                 <div id="nav-overlay-content">
-                    <a class="inactive" href="">Fruits</a>
-                    <a href="template.html">Vegetables</a>
+                    <a class="inactive" href="index.html">Fruits</a>
+                    <a href="index.html">Vegetables</a>
                     <a class="inactive" href="">Flowers</a>
                     <a class="inactive" href="">Animal Products</a>
                     <a href="settings.html">Settings</a>
                 </div>
             </div>
-        </header>
 
     <main>
+        <h1>Settings</h1>
         <div id="setting-container">
-            <span>
-                <h5>SFX</h5>
+            <div id="setting-wrap">
+            <span class="setting">
+                <h5 class="inline setting-text">SFX</h5>
+                <input type="checkbox">
             </span>
 
+            <div id="professions">
+                <h5 >Farming Professions</h5>
+                <span class="setting">
+                <h5 class="inline setting-text">Tiller</h5>
+                <input type="checkbox" id="tiller">
+            </span>
+            <p>Crops worth +10% more</p>
+
+            <span class="setting">
+                <h5 class="inline setting-text">Artisan</h5>
+                <input type="checkbox">
+            </span>
+            <p>Artisan goods (wine, cheese, oil, etc.) worth 40% more</p>
+
+            <p id="multiplayer">Stardew Multiplayer Players:
+            Profession bonuses may not be counted accurately. Sell prices do not stack.</p>
+            </div>  
+            </div>
+
+            <p id="disclaimer">*Assets are property of Concerned Ape*</p>
         </div>
     </main>
 </body>
