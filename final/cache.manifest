@@ -1,64 +1,75 @@
 CACHE MANIFEST
-# version -
+# version - 1.2
 
 CACHE:
 
 # CSS
 #order does not matter
-css-add2home.css
 css-normalize.css
+css-add2home.css
 css-main.css
 
 # IMAGES
+favicon/apple-icon-57x57.png
+favicon/apple-icon-60x60.png
+favicon/apple-icon-72x72.png
+favicon/apple-icon-76x76.png
+favicon/apple-icon-114x114.png
+favicon/apple-icon-120x120.png
+favicon/apple-icon-144x144.png
+favicon/apple-icon-152x152.png
+favicon/apple-icon-180x180.png
+favicon/apple-icon-precomposed.png
+favicon/apple-icon.png
 img/Amaranth.png
 img/Artichoke.png
 img/back-arrow.png
 img/back-arrow@2x.png
 img/Beet.png
-img\bg_landscape.png
-img\bg_landscape@2x.png
-img\big-text.png
-img\big-text@2x.png
-img\Bok_Choy.png
-img\calculate.png
-img\calculate@2x.png
-img\cancel.png
-img\cancel@2x.png
-img\Cauliflower.png
-img\Corn.png
-img\Eggplant.png
-img\Fiddlehead_Fern.png
-img\footer.png
-img\footer@2x.png
-img\Garlic.png
-img\Gold_Quality_Icon.png
-img\Green_Bean.png
-img\Hops.png
-img\item-box.png
-img\item-box@2x.png
-img\Juice.png
-img\Kale.png
-img\largest-box.png
-img\largest-box@2x.png
-img\logo.png
-img\logo@2x.png
-img\nav.png
-img\nav@2x.png
-img\Parsnip.png
-img\Pickles.png
-img\Potato.png
-img\Pumpkin.png
-img\Radish.png
-img\Red_Cabbage.png
-img\SDVbackground.png
-img\Silver_Quality_Icon.png
-img\Spring.png
-img\Summer.png
-img\template-icon.png
-img\template-icon@2x.png
-img\Tomato.png
-img\Wheat.png
-img\Yam.png
+img/bg_landscape.png
+img/bg_landscape@2x.png
+img/big-text.png
+img/big-text@2x.png
+img/Bok_Choy.png
+img/calculate.png
+img/calculate@2x.png
+img/cancel.png
+img/cancel@2x.png
+img/Cauliflower.png
+img/Corn.png
+img/Eggplant.png
+img/Fiddlehead_Fern.png
+img/footer.png
+img/footer@2x.png
+img/Garlic.png
+img/Gold_Quality_Icon.png
+img/Green_Bean.png
+img/Hops.png
+img/item-box.png
+img/item-box@2x.png
+img/Juice.png
+img/Kale.png
+img/largest-box.png
+img/largest-box@2x.png
+img/logo.png
+img/logo@2x.png
+img/nav.png
+img/nav@2x.png
+img/Parsnip.png
+img/Pickles.png
+img/Potato.png
+img/Pumpkin.png
+img/Radish.png
+img/Red_Cabbage.png
+img/bg2.png
+img/Silver_Quality_Icon.png
+img/Spring.png
+img/Summer.png
+img/template-icon.png
+img/template-icon@2x.png
+img/Tomato.png
+img/Wheat.png
+img/Yam.png
 
 # HTML FILES
 index.html

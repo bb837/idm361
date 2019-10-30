@@ -208,8 +208,6 @@ const yam = new veg(
     "A starchy tuber with a lot of culinary versatility."
 );
 
-
-
 const vegList = [
     amaranth,
     artichoke,
@@ -260,16 +258,6 @@ const container = document.getElementById("index-main");
         return button;
     };
 
-    // const createItem = veg => {
-    //     const para = document.createElement("p");
-
-    //     console.log(veg.name);
-
-    //     para.innerHTML = veg.name;
-
-    //     return para;
-    // }
-
     console.log(vegList);
 
     const buildVeg = () => {
@@ -293,6 +281,17 @@ const container = document.getElementById("index-main");
 // Base to gold N x 1.5
 // Base to iridium N x 2
 
+const calculate = document.getElementById('calculate');
+calculate.addEventListener('submit', handleForm, false); // For Submission Listener
+
+function mayDay() {
+    
+}
+
+
+
+
+
 //-------------------------------------------------------------//
 //Local Storage
 
@@ -313,3 +312,6 @@ function load(){
 }
 
 //-------------------------------------------------------------//
+function goToPage(whichPage) {
+    location.href = whichPage;
+  }
