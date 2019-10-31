@@ -277,16 +277,78 @@ const container = document.getElementById("index-main");
 
 //-------------------------------------------------------------//
 
+const resultCont = document.getElementById('result-container');
+const vegForm = document.getElementById('form');
+
+const calculate = document.getElementById('calculate');
+
+// calculate.addEventListener('submit', handleForm, false); // For Submission Listener
+
+function mayDay() { //Error functionality
+    document.getElementById('errorMayDay').style.visability = "visable";
+    document.getElementById('result-container').style.display = 'none';
+    //IS IT 1 or 2 QUOTES
+}
+
 // Base to silver N x 1.25
 // Base to gold N x 1.5
 // Base to iridium N x 2
 
-const calculate = document.getElementById('calculate');
-calculate.addEventListener('submit', handleForm, false); // For Submission Listener
+//function getQuality() {
+    //Get radio button A
+    //Radio button A(basic) = basePrice
+    //Radio button B(silver) = (basePrice x 1.25)
+    //Radio button C(gold) = (basePrice x 1.5)
+    //Radio button D(iridium) = (basePrice x 2)
 
-function mayDay() {
+    //return cropQuality
+//}
+
+//function getProduct() {
+    //Radio button A(AsIs) = cropQuality
+    //Radio button B(pickle) = picklePrice
+    //Radio button C(juice) = juicePrice
+
+    //return vegProduct
+//}
+
+    //Crop Profit = ??????? I HAVE NONE
+    //Pickle Profit = picklePrice/cropQuality
+    //juice Profit = juicePrice/cropQuality
+
+// function getRatio() {
+    //valueRatio = cropS I HAVE NONE
+    //valueRatio = (picklePrice-cropQuality)/3/100
+    //valueRatio = (juicePrice-cropQuality)/7/100
+
+    //return valueRatio
+//}
+
+
+// function showCalc() {  // Handles FORM
+    //check if both buttons are checked, if not run mayday
+
+    //getQuality ---> get cropQuality
+    //getProduct---> get vegProduct
+
+    //vegProduct/cropQuality = profitPercentage
+    //print profit Percentage
+
+    // if valueRatio =
+        //between 0 and .99 print (Fuck that, you have better things to do)
+        //between 1 and 1.99 print (I mean its not a TERRIBLE idea)
+        //between 2 and 3 print (Fuck yeah)
+
+        //if neither/null print (It's always good to sell good quality crops)
+
+        //show result-container
+//}
+
+
+
+
     
-}
+//}
 
 
 

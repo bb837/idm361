@@ -1,5 +1,5 @@
 CACHE MANIFEST
-# version - 1.2
+# version - 1.5
 
 CACHE:
 
@@ -45,9 +45,10 @@ img/Garlic.png
 img/Gold_Quality_Icon.png
 img/Green_Bean.png
 img/Hops.png
+img/Iridium_Quality_Icon.png
 img/item-box.png
 img/item-box@2x.png
-img/Juice.png
+img/juice.png
 img/Kale.png
 img/largest-box.png
 img/largest-box@2x.png
@@ -56,7 +57,7 @@ img/logo@2x.png
 img/nav.png
 img/nav@2x.png
 img/Parsnip.png
-img/Pickles.png
+img/pickles.png
 img/Potato.png
 img/Pumpkin.png
 img/Radish.png
@@ -68,6 +69,7 @@ img/Summer.png
 img/template-icon.png
 img/template-icon@2x.png
 img/Tomato.png
+img/triangle.png
 img/Wheat.png
 img/Yam.png
 

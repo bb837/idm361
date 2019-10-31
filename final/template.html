@@ -1,30 +1,32 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <meta charset="UTF-8">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-title" content="SV Calculator">
+        <meta name="viewport" content="initial-scale=1.0, user-scalable=no, width=device-width, maximum-scale=1.0">
+        <meta name="format-detection" content="telephone=no">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
     
-    <link rel="stylesheet" href="normalize.css">
-    <link rel="stylesheet" href="master.css">
-
+        <link rel="stylesheet" href="normalize.css">
+        <link rel="stylesheet" href="master.css">
     <title></title>
 </head>
 <body id="top">
     <header class="index-header">
             <img id="back-arrow" src="img/back-arrow.png" alt="back-arrow">
-            <img src="img/logo.png" alt="Stardew Valley Calculator" id="logo">
+            <img src="img/logo@2x.png" alt="Stardew Valley Calculator" id="logo">
             <img id="nav-icon" src="img/nav.png" alt="hamburger">
         </header> 
         
         <div id="overlay">
                 <img src="img/cancel.png" alt="X" id="cancel">
                 <div id="nav-overlay-content">
-                    <a class="inactive" href="index.html">Fruits</a>
-                    <a href="index.html">Vegetables</a>
+                    <a onclick="goToPage('template.html')">Example</a>
+                    <a onclick="goToPage('index.html')">Vegetables</a>
                     <a class="inactive" href="">Flowers</a>
                     <a class="inactive" href="">Animal Products</a>
-                    <a href="settings.html">Settings</a>
+                    <a onclick="goToPage('settings.html')">Settings</a>
                 </div>
             </div>
     <main>
@@ -39,35 +41,63 @@
                 <h4>"A purple grain cultivated by an ancient civilization."</h4>
             </div>
         </div>
-        <div id="step1">
-            <h2>Step 1: Choose Quality of Crop</h2>
-            <div id="cr-quality">
-                <form action="">
-                    <div id="form-item">
-                        <input type="radio" name="Standard" id="stan">
-                        <input type="radio" name="Standard" id="stan">
-                        <input type="radio" name="Standard" id="stan">
+        <div id="steps">
+            <h2 class="step-header">Step 1: Choose Quality of Crop</h2>
+                <form id="form" action="">
+                    <div class="form-item">
+                        <label class="calc-label">
+                          <input type="radio" name="quality" id="crop-basic">  
+
+                          <img class="selection-icon" src="img/Amaranth.png" alt="Amaranth">
+
+                        </label>
+                        <label class="calc-label">
+                            <input type="radio" name="quality" id="crop-silver"> 
+
+                            <img class="selection-icon" src="img/Amaranth.png" alt="Amaranth">
+
+                            <img class="star" src="img/Silver_Quality_Icon.png" alt="silver star">
+                        </label>
+                        <label class="calc-label">
+                            <input type="radio" name="quality" id="crop-gold">  
+
+                            <img class="selection-icon" src="img/Amaranth.png" alt="Amaranth">
+
+                            <img class="star" src="img/Gold_Quality_Icon.png" alt="gold star">
+                        </label>
+                        <label class="calc-label">
+                            <input type="radio" name="quality" id="crop-iridium">
+                            
+                            <img class="selection-icon" src="img/Amaranth.png" alt="Amaranth">
+
+                            <img class="star" src="img/Iridium_Quality_Icon.png" alt="iridium star">
+                        </label>
                     </div>
+
+                    <h2 class="step-header">Step 2: Choose Final Product</h2>
+                
+                <div class="form-item">
+                        <label class="calc-label">
+                                <input type="radio" name="product" id="AsIs">
+                                <img class="selection-icon" src="img/Amaranth.png" alt="Amaranth">   
+                                </label>
+                                <label class="calc-label">
+                                    <input type="radio" name="product" id="pickle"> 
+                                    <img class="selection-icon" src="img/pickles.png" alt="Pickles">
+                                </label>
+                                <label class="calc-label">
+                                    <input type="radio" name="product" id="juice"> 
+                                    
+                                    <img class="selection-icon" src="img/juice.png" alt="Juice">
+                                </label>
+                        </div>
+                        <input type="submit" id="calculate" value="calculate">
+                
                 </form>
             </div>
-        </div>
 
-        <div id="step2">
-                <h2>Step 1: Choose Final Product</h2>
-                <div id="cr-product">
-                    <form action="">
-                        <div id="form-item">
-                            <input type="radio" name="Standard" id="stan">
-                            <input type="radio" name="Standard" id="stan">
-                            <input type="radio" name="Standard" id="stan">
-                        </div>
-                    </form>
-                </div>
-            </div>
 
-        <input type="submit" id="calculate" value="calculate">
-
-        <p id="errorMayDay">Uh oh!</p>
+        <p id="errorMayDay">Uh oh! Something is not right. Check if both components of the calculation are picked and submit again.</p>
 
         <div id="result-container">
             <h5>Profitability</h5>
