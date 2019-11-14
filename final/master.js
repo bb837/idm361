@@ -1,5 +1,5 @@
 //Create Objects
-function veg(name, season, img, basePrice, picklePrice, juicePrice, description) {
+function veg(name, season, img, basePrice, picklePrice, juicePrice, description, quality) {
     this.name = name;
     this.season = season;
     this.img = img;
@@ -7,6 +7,7 @@ function veg(name, season, img, basePrice, picklePrice, juicePrice, description)
     this.picklePrice = picklePrice;
     this.juicePrice = juicePrice;
     this.description = description;
+    this.quality = quality;
 
 };
 
@@ -17,7 +18,9 @@ const amaranth = new veg(
     150,
     350,
     337,
-    "A purple grain cultivated by an ancient civilization."
+    "A purple grain cultivated by an ancient civilization.",
+    3
+
 );
 
 const artichoke = new veg(
@@ -254,6 +257,14 @@ const container = document.getElementById("index-main");
 
         button.appendChild(itemImage);
         button.appendChild(imgItemText);
+
+        
+        button.addEventListener('click', function() {
+            console.log(`You Touched me! ${veg.name}`);
+            localStorage.setItem('product', JSON.stringify(veg));
+            location.href = 'template.html';
+        }
+        , false);
 
         return button;
     };
