@@ -507,20 +507,40 @@ footer {
     html {
         font-size: 110% !important;
     }
+
+    .img-item-text {
+    margin-left: 5.8rem;
+    margin-top: .5rem;
+    margin-left: 5.3rem;
+    /* margin-top: .5rem; */
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;  
+    }
   }
 
 
 @media only screen and (orientation:landscape) {
-    body {
+    /* body {
       background: url(img/bg_landscape.png);
       z-index: 100;
       width: 100vw;
       height: 100vh;
-    }
+    } */
 
+    
     body * {
         display: none;
     }
+    
+    #background {
+        display: block !important;
+        background: url(img/bg_landscape@2x.png);
+        background-size: cover;
+        width: 100vw;
+        height: 100vh;
+    }
+
 
     #section-title {
         display: none;
