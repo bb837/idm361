@@ -1,5 +1,8 @@
+//On launch: ROOSTER SOUND
+
+
 //Create Objects
-function veg(name, season, img, basePrice, picklePrice, juicePrice, description, quality) {
+function veg(name, season, img, basePrice, picklePrice, juicePrice, description, quality, growth, cropyield) {
     this.name = name;
     this.season = season;
     this.img = img;
@@ -8,6 +11,8 @@ function veg(name, season, img, basePrice, picklePrice, juicePrice, description,
     this.juicePrice = juicePrice;
     this.description = description;
     this.quality = quality;
+    this.growth = growth;
+    this.cropyield = cropyield;
 
 };
 
@@ -19,8 +24,9 @@ const amaranth = new veg(
     350,
     337,
     "A purple grain cultivated by an ancient civilization.",
-    3
-
+    3,
+    "7 days",
+    "Single"
 );
 
 const artichoke = new veg(
@@ -30,7 +36,10 @@ const artichoke = new veg(
     160,
     370,
     360,
-    "A bud of a thistle plant. The spiny outer leaves conceal a fleshy, filling interior."
+    "A bud of a thistle plant. The spiny outer leaves conceal a fleshy, filling interior.",
+    3,
+    "8 days",
+    "Single"
 );
 
 const beet = new veg(
@@ -40,7 +49,10 @@ const beet = new veg(
     100,
     250,
     225,
-    "A sweet and earthy root vegatable. As a bonus, the leaves make a great salad."
+    "A sweet and earthy root vegatable. As a bonus, the leaves make a great salad.",
+    3,
+    "6 days",
+    "Single"
 );
 
 const bokchoy = new veg(
@@ -50,7 +62,10 @@ const bokchoy = new veg(
     80,
     210,
     180,
-    "A bud of a thistle plant. The spiny outer leaves conceal a fleshy, filling interior."
+    "A bud of a thistle plant. The spiny outer leaves conceal a fleshy, filling interior.",
+    3,
+    "4 days",
+    "Single"
 );
 
 const cauliflower = new veg(
@@ -60,7 +75,10 @@ const cauliflower = new veg(
     175,
     400,
     393,
-    "Valuable, but slow-growing. Despite its pale color, the florets are packed with nutrients."
+    "Valuable, but slow-growing. Despite its pale color, the florets are packed with nutrients.",
+    3,
+    "12 days",
+    "Single"
 );
 
 const corn = new veg(
@@ -70,7 +88,10 @@ const corn = new veg(
     50,
     150,
     112,
-    "One of the most popular grains. The sweet, fresh cobs are a summer favorite."
+    "One of the most popular grains. The sweet, fresh cobs are a summer favorite.",
+    3,
+    "14 days",
+    "Multiple"
 );
 
 const eggplant = new veg(
@@ -80,7 +101,10 @@ const eggplant = new veg(
     60,
     170,
     135,
-    "A rich and wholesome relative of the tomato. Delicious fried or stewed."
+    "A rich and wholesome relative of the tomato. Delicious fried or stewed.",
+    3,
+    "5 days",
+    "Multiple"
 );
 const fiddlehead = new veg(
     "Fiddlehead Fern",
@@ -89,7 +113,10 @@ const fiddlehead = new veg(
     90,
     230,
     202,
-    "The young shoots are an edible specialty."
+    "The young shoots are an edible specialty.",
+    4,
+    "NA",
+    "Multiple"
 );
 const garlic = new veg(
     "Garlic",
@@ -98,7 +125,10 @@ const garlic = new veg(
     60,
     170,
     135,
-    "Adds a wonderful zestiness to dishes. High quality garlic can be pretty spicy."
+    "Adds a wonderful zestiness to dishes. High quality garlic can be pretty spicy.",
+    3,
+    "4 days",
+    "Single"
 );
 const greenbean = new veg(
     "Green Bean",
@@ -107,7 +137,10 @@ const greenbean = new veg(
     40,
     130,
     90,
-    "A juicy little bean with a cool, crisp snap."
+    "A juicy little bean with a cool, crisp snap.",
+    3,
+    "10 days",
+    "Multiple"
 );
 const hops = new veg(
     "Hops",
@@ -116,7 +149,11 @@ const hops = new veg(
     50,
     150,
     112,
-    "One of the most popular grains. The sweet, fresh cobs are a summer favorite."
+    "One of the most popular grains. The sweet, fresh cobs are a summer favorite.",
+    3,
+    "11 days",
+    "Multiple"
+
 );
 
 const kale = new veg(
@@ -126,7 +163,10 @@ const kale = new veg(
     110,
     270,
     247,
-    "The waxy leaves are great in soups and stir frys."
+    "The waxy leaves are great in soups and stir frys.",
+    3,
+    "6 days",
+    "Single"
 );
 
 const parsnip = new veg(
@@ -136,7 +176,10 @@ const parsnip = new veg(
     35,
     120,
     78,
-    "A spring tuber closely related to the carrot. It has an earthy taste and is full of nutrients."
+    "A spring tuber closely related to the carrot. It has an earthy taste and is full of nutrients.",
+    3,
+    "4 days",
+    "Single"
 );
 
 const potato = new veg(
@@ -146,17 +189,23 @@ const potato = new veg(
     80,
     210,
     180,
-    "A widely cultivated tuber."
+    "A widely cultivated tuber.",
+    3,
+    "6 days",
+    "Single"  
 );
 
 const pumpkin = new veg(
     "Pumpkin",
     "Fall",
-    "img/Corn.png",
+    "img/Pumpkin.png",
     320,
     690,
     720,
-    "A fall favorite, grown for its crunchy seeds and delicately flavored flesh. As a bonus, the hollow shell can be carved into a festive decoration."
+    "A fall favorite, grown for its crunchy seeds and delicately flavored flesh. As a bonus, the hollow shell can be carved into a festive decoration.",
+    3,
+    "13 days",
+    "Single"
 );
 
 const radish = new veg(
@@ -166,7 +215,10 @@ const radish = new veg(
     90,
     230,
     202,
-    "A fall favorite, grown for its crunchy seeds and delicately flavored flesh. As a bonus, the hollow shell can be carved into a festive decoration."
+    "A fall favorite, grown for its crunchy seeds and delicately flavored flesh. As a bonus, the hollow shell can be carved into a festive decoration.",
+    3,
+    "6 days",
+    "Single"
 );
 
 const cabbage = new veg(
@@ -176,7 +228,10 @@ const cabbage = new veg(
     260,
     570,
     585,
-    "Often used in salads and coleslaws. The color can range from purple to blue to green-yellow depending on soil conditions."
+    "Often used in salads and coleslaws. The color can range from purple to blue to green-yellow depending on soil conditions.",
+    3,
+    "9 days",
+    "Single"
 );
 
 const tomato = new veg(
@@ -186,7 +241,10 @@ const tomato = new veg(
     60,
     170,
     135,
-    "Rich and slightly tangy, the Tomato has a wide variety of culinary uses."
+    "Rich and slightly tangy, the Tomato has a wide variety of culinary uses.",
+    3,
+    "11 days",
+    "Multiple"
 );
 
 const wheat = new veg(
@@ -196,7 +254,10 @@ const wheat = new veg(
     25,
     100,
     200,
-    "One of the most widely cultivated grains. Makes a great flour for breads and cakes."
+    "One of the most widely cultivated grains. Makes a great flour for breads and cakes.",
+    3,
+    "4 days",
+    "Single"
 );
 
 //WHEAT ISNT JUICE ITS BEER!!!!!
@@ -208,7 +269,9 @@ const yam = new veg(
     160,
     370,
     360,
-    "A starchy tuber with a lot of culinary versatility."
+    "A starchy tuber with a lot of culinary versatility.",
+    3,
+    "10 days"
 );
 
 const vegList = [
@@ -269,11 +332,8 @@ const container = document.getElementById("index-main");
         return button;
     };
 
-    console.log(vegList);
-
     const buildVeg = () => {
         vegList.forEach(vegName => {
-            console.log(veg.name);
             const vegButton = createItem(vegName);
             container.appendChild(vegButton);
         });
@@ -300,6 +360,9 @@ function mayDay() { //Error functionality
     document.getElementById('result-container').style.display = 'none';
     //IS IT 1 or 2 QUOTES
 }
+
+
+
 
 // Base to silver N x 1.25
 // Base to gold N x 1.5

@@ -33,44 +33,44 @@
             </div>
     <main>
         <div id="template-info-container">
-            <img src="img/Amaranth.png" alt="Amaranth" class="template-item-img">
+            <img id="template-image" src="img/Amaranth.png" alt="Amaranth" class="template-item-img">
             <div id="template-item-text">
-                <h3>Name</h3>
-                <p>Growth</p>
-                <p>Single Yield</p>
+                <h3 id="template-name"></h3>
+                <p id="template-growth"></p>
+                <p id="template-yield"></p>
             </div>
-            <div id="template-description">
-                <h4>"A purple grain cultivated by an ancient civilization."</h4>
+            <div id="template-description-container">
+                <h4 id="template-description"></h4>
             </div>
         </div>
         <div id="steps">
             <h2 class="step-header">Step 1: Choose Quality of Crop</h2>
                 <form id="form" action="">
-                    <div class="form-item">
+                    <div id="quality-select" class="form-item">
                         <label class="calc-label">
-                          <input type="radio" name="quality" id="crop-basic">  
+                          <input type="radio" name="quality" id="crop-basic" required>  
 
-                          <img class="selection-icon" src="img/Amaranth.png" alt="Amaranth">
+                          <img class="selection-icon quality-icon" src="img/Amaranth.png" alt="Amaranth">
 
                         </label>
                         <label class="calc-label">
                             <input type="radio" name="quality" id="crop-silver"> 
 
-                            <img class="selection-icon" src="img/Amaranth.png" alt="Amaranth">
+                            <img class="selection-icon quality-icon" src="img/Amaranth.png" alt="Amaranth">
 
                             <img class="star" src="img/Silver_Quality_Icon.png" alt="silver star">
                         </label>
                         <label class="calc-label">
                             <input type="radio" name="quality" id="crop-gold">  
 
-                            <img class="selection-icon" src="img/Amaranth.png" alt="Amaranth">
+                            <img class="selection-icon quality-icon" src="img/Amaranth.png" alt="Amaranth">
 
                             <img class="star" src="img/Gold_Quality_Icon.png" alt="gold star">
                         </label>
                         <label class="calc-label">
                             <input type="radio" name="quality" id="crop-iridium">
                             
-                            <img class="selection-icon" src="img/Amaranth.png" alt="Amaranth">
+                            <img class="selection-icon quality-icon" src="img/Amaranth.png" alt="Amaranth">
 
                             <img class="star" src="img/Iridium_Quality_Icon.png" alt="iridium star">
                         </label>
@@ -80,8 +80,8 @@
                 
                 <div class="form-item">
                         <label class="calc-label">
-                                <input type="radio" name="product" id="AsIs">
-                                <img class="selection-icon" src="img/Amaranth.png" alt="Amaranth">   
+                                <input type="radio" name="product" id="AsIs" required>
+                                <img class="selection-icon" id="step2-asIs" src="" alt="Amaranth">   
                                 </label>
                                 <label class="calc-label">
                                     <input type="radio" name="product" id="pickle"> 
@@ -93,7 +93,7 @@
                                     <img class="selection-icon" src="img/juice.png" alt="Juice">
                                 </label>
                         </div>
-                        <input type="submit" id="calculate" value="calculate">
+                        <input type="submit" id="calculate" value="calculate" onclick="formHandler ()">
                 
                 </form>
             </div>

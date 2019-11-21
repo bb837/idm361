@@ -276,7 +276,13 @@ footer {
 #template-description {
     width: 230px;
     margin: 0 auto;
+    font-size: .9rem;
+}
 
+#template-description-container {
+    margin: 0 auto;
+    position: relative;
+    bottom: 1rem;
 }
 
 #steps {
@@ -420,7 +426,6 @@ footer {
 }
 
 #disclaimer {
-    position: relative;
     bottom: -1.7rem;
     left: 1.4rem;
     font-size: 0.9375rem;
@@ -496,7 +501,7 @@ footer {
 
   #errorMayDay {
       color:black;
-      visibility: collapse;
+      display: none;
       width: 80%;
       margin-top: 1rem;
       font-size: 1.2rem;
