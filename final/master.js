@@ -25,7 +25,7 @@ const amaranth = new veg(
     337,
     "A purple grain cultivated by an ancient civilization.",
     3,
-    "7 days",
+    7,
     "Single"
 );
 
@@ -38,7 +38,7 @@ const artichoke = new veg(
     360,
     "A bud of a thistle plant. The spiny outer leaves conceal a fleshy, filling interior.",
     3,
-    "8 days",
+    8,
     "Single"
 );
 
@@ -51,7 +51,7 @@ const beet = new veg(
     225,
     "A sweet and earthy root vegatable. As a bonus, the leaves make a great salad.",
     3,
-    "6 days",
+    6,
     "Single"
 );
 
@@ -64,7 +64,7 @@ const bokchoy = new veg(
     180,
     "A bud of a thistle plant. The spiny outer leaves conceal a fleshy, filling interior.",
     3,
-    "4 days",
+    4,
     "Single"
 );
 
@@ -77,7 +77,7 @@ const cauliflower = new veg(
     393,
     "Valuable, but slow-growing. Despite its pale color, the florets are packed with nutrients.",
     3,
-    "12 days",
+    12,
     "Single"
 );
 
@@ -90,7 +90,7 @@ const corn = new veg(
     112,
     "One of the most popular grains. The sweet, fresh cobs are a summer favorite.",
     3,
-    "14 days",
+    14,
     "Multiple"
 );
 
@@ -103,7 +103,7 @@ const eggplant = new veg(
     135,
     "A rich and wholesome relative of the tomato. Delicious fried or stewed.",
     3,
-    "5 days",
+    5,
     "Multiple"
 );
 const fiddlehead = new veg(
@@ -127,7 +127,7 @@ const garlic = new veg(
     135,
     "Adds a wonderful zestiness to dishes. High quality garlic can be pretty spicy.",
     3,
-    "4 days",
+    4,
     "Single"
 );
 const greenbean = new veg(
@@ -139,7 +139,7 @@ const greenbean = new veg(
     90,
     "A juicy little bean with a cool, crisp snap.",
     3,
-    "10 days",
+    10,
     "Multiple"
 );
 const hops = new veg(
@@ -151,7 +151,7 @@ const hops = new veg(
     112,
     "One of the most popular grains. The sweet, fresh cobs are a summer favorite.",
     3,
-    "11 days",
+    11,
     "Multiple"
 
 );
@@ -165,7 +165,7 @@ const kale = new veg(
     247,
     "The waxy leaves are great in soups and stir frys.",
     3,
-    "6 days",
+    6,
     "Single"
 );
 
@@ -178,7 +178,7 @@ const parsnip = new veg(
     78,
     "A spring tuber closely related to the carrot. It has an earthy taste and is full of nutrients.",
     3,
-    "4 days",
+    4,
     "Single"
 );
 
@@ -191,7 +191,7 @@ const potato = new veg(
     180,
     "A widely cultivated tuber.",
     3,
-    "6 days",
+    6,
     "Single"  
 );
 
@@ -204,7 +204,7 @@ const pumpkin = new veg(
     720,
     "A fall favorite, grown for its crunchy seeds and delicately flavored flesh. As a bonus, the hollow shell can be carved into a festive decoration.",
     3,
-    "13 days",
+    13,
     "Single"
 );
 
@@ -217,7 +217,7 @@ const radish = new veg(
     202,
     "A fall favorite, grown for its crunchy seeds and delicately flavored flesh. As a bonus, the hollow shell can be carved into a festive decoration.",
     3,
-    "6 days",
+    6,
     "Single"
 );
 
@@ -230,7 +230,7 @@ const cabbage = new veg(
     585,
     "Often used in salads and coleslaws. The color can range from purple to blue to green-yellow depending on soil conditions.",
     3,
-    "9 days",
+    9,
     "Single"
 );
 
@@ -243,7 +243,7 @@ const tomato = new veg(
     135,
     "Rich and slightly tangy, the Tomato has a wide variety of culinary uses.",
     3,
-    "11 days",
+    11,
     "Multiple"
 );
 
@@ -256,7 +256,7 @@ const wheat = new veg(
     200,
     "One of the most widely cultivated grains. Makes a great flour for breads and cakes.",
     3,
-    "4 days",
+    4,
     "Single"
 );
 
@@ -271,7 +271,8 @@ const yam = new veg(
     360,
     "A starchy tuber with a lot of culinary versatility.",
     3,
-    "10 days"
+    10,
+    "Single"
 );
 
 const vegList = [
@@ -320,6 +321,9 @@ const container = document.getElementById("index-main");
 
         button.appendChild(itemImage);
         button.appendChild(imgItemText);
+
+        var testRatio = (veg.picklePrice - veg.basePrice)/(veg.growth + 3)/10;
+        console.log(veg.name + " " + testRatio);
 
         
         button.addEventListener('click', function() {

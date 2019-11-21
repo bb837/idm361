@@ -1,5 +1,5 @@
 CACHE MANIFEST
-# version - 1.9
+# version - 2.0
 
 CACHE:
 
@@ -83,6 +83,7 @@ js-refresh-manifest.js
 js-add2home.js
 nav.js
 master.js
+template.js
 
 ## Any resources not listed above will require the user to be online.
 NETWORK:
