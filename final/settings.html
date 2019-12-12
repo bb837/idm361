@@ -16,20 +16,19 @@
 <body id="top">
         <div id="background"></div>
 
-
-    <header class="index-header">
-            <img id="back-arrow" src="img/back-arrow.png" alt="back-arrow">
-            <img src="img/logo.png" alt="Stardew Valley Calculator" id="logo">
-            <img id="nav-icon" src="img/nav.png" alt="hamburger">
-        </header> 
-        
+        <header class="index-header">
+                <a onclick="goToPage('index.html')"><img id="back-arrow" src="img/back-arrow.png" alt="back-arrow"></a>
+                <img src="img/logo@2x.png" alt="Stardew Valley Calculator" id="logo">
+                <img id="nav-icon" src="img/nav.png" alt="hamburger">
+            </header> 
+            
         <div id="overlay">
                 <img src="img/cancel.png" alt="X" id="cancel">
                 <div id="nav-overlay-content">
-                    <a onclick="goToPage('template.html')">Example</a>
                     <a onclick="goToPage('index.html')">Vegetables</a>
-                    <a class="inactive" href="">Flowers</a>
-                    <a class="inactive" href="">Animal Products</a>
+                    <h6 class="inactive">Fruits</h6>
+                    <h6 class="inactive" href="">Flowers</h6>
+                    <h6 class="inactive" href="">Animal Products</h6>
                     <a onclick="goToPage('settings.html')">Settings</a>
                 </div>
             </div>
@@ -38,29 +37,24 @@
         <h1>Settings</h1>
         <div id="setting-container">
             <div id="setting-wrap">
-            <label class="container">
-                <h5 class="inline setting-text">SFX</h5>
-                <input type="checkbox">
-                <span class="checkmark"></span>
-            </label>
 
             <div id="professions">
                 <h5 >Farming Professions</h5>
                 <label class="container">
                 <h5 class="inline setting-text">Tiller</h5>
-                <input type="checkbox" id="tiller">
+                <input type="radio" id="tiller">
                 <span class="checkmark"></span>
             </label>
             <p>Crops worth +10% more</p>
 
             <label class="container">
                 <h5 class="inline setting-text">Artisan</h5>
-                <input id="artisan" type="checkbox">
+                <input id="artisan" type="radio">
                 <span class="checkmark"></span>
             </label>
             <p>Artisan goods (wine, cheese, oil, etc.) worth 40% more</p>
 
-            <p id="multiplayer">Stardew Multiplayer Players:
+            <p id="multiplayer"> <b>Stardew Multiplayer Players:</b> 
             Profession bonuses may not be counted accurately. Sell prices do not stack.</p>
             </div>  
             </div>
@@ -68,7 +62,7 @@
         <p id="disclaimer">*Assets are property of Concerned Ape*</p>
     </main>
 </body>
-    <script src="js-refresh-mainfest.js"></script>
     <script src="nav.js"></script>
     <script src="master.js"></script>
+    <script src="settings.js"></script>
 </html>

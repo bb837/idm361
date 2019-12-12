@@ -1,6 +1,3 @@
-//On launch: ROOSTER SOUND
-
-
 //Create Objects
 function veg(name, season, img, basePrice, picklePrice, juicePrice, description, quality, growth, cropyield) {
     this.name = name;
@@ -323,11 +320,9 @@ const container = document.getElementById("index-main");
         button.appendChild(imgItemText);
 
         var testRatio = (veg.picklePrice - veg.basePrice)/(veg.growth + 3)/10;
-        console.log(veg.name + " " + testRatio);
-
         
         button.addEventListener('click', function() {
-            console.log(`You Touched me! ${veg.name}`);
+            // sessionStorage.setItem('product', JSON.stringify(veg));
             localStorage.setItem('product', JSON.stringify(veg));
             location.href = 'template.html';
         }
@@ -345,7 +340,9 @@ const container = document.getElementById("index-main");
 
     let myPromise = new Promise((resolve, reject) => {
         window.onload = () => {
-            buildVeg();
+            if (container != null) {
+                buildVeg();
+              }
             resolve("Success!");
         }
     })
@@ -359,99 +356,19 @@ const calculate = document.getElementById('calculate');
 
 // calculate.addEventListener('submit', handleForm, false); // For Submission Listener
 
+var mayDayDiv = document.getElementById('errorMayDay');
+
 function mayDay() { //Error functionality
-    document.getElementById('errorMayDay').style.visability = "visable";
+    console.log("May day start");
+    mayDayDiv.style.display = "block";
     document.getElementById('result-container').style.display = 'none';
     //IS IT 1 or 2 QUOTES
+    console.log("May day end");
 }
 
-
-
-
-// Base to silver N x 1.25
-// Base to gold N x 1.5
-// Base to iridium N x 2
-
-//function getQuality() {
-    //Get radio button A
-    //Radio button A(basic) = basePrice
-    //Radio button B(silver) = (basePrice x 1.25)
-    //Radio button C(gold) = (basePrice x 1.5)
-    //Radio button D(iridium) = (basePrice x 2)
-
-    //return cropQuality
-//}
-
-//function getProduct() {
-    //Radio button A(AsIs) = cropQuality
-    //Radio button B(pickle) = picklePrice
-    //Radio button C(juice) = juicePrice
-
-    //return vegProduct
-//}
-
-    //Crop Profit = ??????? I HAVE NONE
-    //Pickle Profit = picklePrice/cropQuality
-    //juice Profit = juicePrice/cropQuality
-
-// function getRatio() {
-    //valueRatio = cropS I HAVE NONE
-    //valueRatio = (picklePrice-cropQuality)/3/100
-    //valueRatio = (juicePrice-cropQuality)/7/100
-
-    //return valueRatio
-//}
-
-
-// function showCalc() {  // Handles FORM
-    //check if both buttons are checked, if not run mayday
-
-    //getQuality ---> get cropQuality
-    //getProduct---> get vegProduct
-
-    //vegProduct/cropQuality = profitPercentage
-    //print profit Percentage
-
-    // if valueRatio =
-        //between 0 and .99 print (Fuck that, you have better things to do)
-        //between 1 and 1.99 print (I mean its not a TERRIBLE idea)
-        //between 2 and 3 print (Fuck yeah)
-
-        //if neither/null print (It's always good to sell good quality crops)
-
-        //show result-container
-//}
-
-
-
-
-    
-//}
-
-
-
-
-
-//-------------------------------------------------------------//
-//Local Storage
-
-//BUG:: CHECKED ON RELOAD, BUT NOT WHEN LEAVING ANOTHER PAGE AND COMING BACK
-
-function professionSave(){
-    var checkbox = document.getElementById('tiller');
-    if(document.getElementById('tiller').checked) {
-        localStorage.setItem('tiller', true);
-    }
-}
-
-function load(){    
-    var checked = localStorage.getItem('tiller');
-    if (checked === "true") {
-        document.getElementById("tiller").setAttribute('checked','checked');
-    }
-}
-
-//-------------------------------------------------------------//
+//-------------------------------------------------------------//-------------------------------------------------------------//
 function goToPage(whichPage) {
     location.href = whichPage;
   }
+
+//put functionality in it

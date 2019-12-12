@@ -38,7 +38,7 @@
     </div> -->
 
     <header class="index-header">
-        <img id="back-arrow" src="img/back-arrow.png" alt="back-arrow">
+        <img id="back-arrow" src="img/back-arrow.png" alt="back-arrow" style="visibility: hidden;">
         <img src="img/logo.png" alt="Stardew Valley Calculator" id="logo">
         <img id="nav-icon" src="img/nav.png" alt="hamburger">
     </header> 
@@ -46,10 +46,10 @@
     <div id="overlay">
             <img src="img/cancel.png" alt="X" id="cancel">
             <div id="nav-overlay-content">
-                <a onclick="goToPage('template.html')">Example</a>
                 <a onclick="goToPage('index.html')">Vegetables</a>
-                <a class="inactive" href="">Flowers</a>
-                <a class="inactive" href="">Animal Products</a>
+                <h6 class="inactive">Fruits</h6>
+                <h6 class="inactive" href="">Flowers</h6>
+                <h6 class="inactive" href="">Animal Products</h6>
                 <a onclick="goToPage('settings.html')">Settings</a>
             </div>
         </div>
@@ -62,7 +62,7 @@
     </main>
 
     <footer>
-        <a href="#top" id="back-to-top">
+        <a onclick="goToPage('#top')" id="back-to-top">
             <img id="footer-img" src="img/footer@2x.png" alt="Back To Top"> 
         </a>
     </footer>

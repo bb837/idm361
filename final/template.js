@@ -49,9 +49,33 @@ var cropVal;
 var prodVal;
 var growthPd;
 // var resultRatio = (prodVal - cropVal)/growthPd/100;
+var resultText = document.getElementById("result-text");
+
+
+
+
 
 function formHandler () {
     event.preventDefault();
+
+    document.getElementById("result-container").style.display = "block";
+
+    tiller();
+    artisan();
+    
+    if (vegForm.checkValidity() === false) {
+        mayDay();
+    } else {
+        displayResult();
+    }
+
+}
+
+function displayResult() {
+    if (mayDayDiv.style.display !== 'none') {
+        mayDayDiv.style.display = 'none';
+    }
+    
     if (cropBasic.checked == true) {
         cropVal = product.basePrice;
     } else if (cropSilver.checked == true) {
@@ -87,11 +111,6 @@ function formHandler () {
         printProfit.style.color = "#CA524D";
     }
 
-    var resultText = document.getElementById("result-text");
-    // var growthPd = product.growth;
-    // console.log(growthPd);
-
-
     if (isNaN(growthPd) == true) {
         resultText.innerHTML = "This is a forage item. Perhaps pickle it  or sell as is. Or make it into risotto!"
      } else {    
@@ -103,12 +122,26 @@ function createRatio() {
     var resultRatio = (prodVal - cropVal)/growthPd/10;
     console.log(prodVal);
     console.log(cropVal);
-    console.log(growthPd);
-    console.log(resultRatio);
 
-    if (resultRatio >= 0 && resultRatio >= 0.99)
-    if (resultRatio)
-    
+    if (resultRatio >= 0 && resultRatio <= 0.99) {
+        resultText.innerHTML = "It is not worth the time and energy to make this. Perhaps sell it as is or use it for nutrients.";   
+    } else if (resultRatio >= 1 && resultRatio <= 1.99) {
+        resultText.innerHTML = "This exchange will bring you a fair profit. Use it sell or gift to your favorite townsperson.";
+    } else if (resultRatio >= 2 && resultRatio <= 3) {
+        resultText.innerHTML = "Wow! What a cash crop! Use this surplus to buy you a shiny new iridium watering can.";
+    }  
+
 }
 
+function tiller() {
+    if (localStorage.getItem("tiller") !== null) {
+        product.basePrice = product.basePrice + (product.basePrice * .1);
+    }
+}
+
+function artisan() {
+    if (localStorage.getItem("artisan") !== null) {
+        product.picklePrice = product.picklePrice + (product.picklePrice * .4);
+    }
+}
 // set another var for growth

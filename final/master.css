@@ -53,6 +53,17 @@ h5 {
     color: #6b4028;
 }
 
+h6 {
+    color: rgba(107,64,40, 0.75) !important;
+    margin: .5rem auto !important;
+  text-decoration: none;
+  font-size: 1.5rem;
+  display: block;
+  transition: 0.3s;
+  font-family: 'svboldregular';
+  cursor: pointer; 
+}
+
 p {
     font-size: 1rem;
     margin: 0;
@@ -85,7 +96,7 @@ header {
     width: 20px;
     height: 20px;
     padding: 1.1rem;
-    visibility: hidden;
+
 }
 
 #nav-icon {
@@ -101,7 +112,7 @@ header {
     padding: 1rem;
     position: relative;
     z-index: 50;
-    left: 16.5rem;
+    left: 20rem;
     /* visibility: hidden;  */
 }
 
@@ -133,7 +144,7 @@ header {
   }
 
     .inactive {
-      color: rgba(107,64,40, 0.75) !important;
+      color: rgba(107,64,40, 0.45) !important;
       padding: 1.2rem 0 .3rem;
     text-decoration: none;
     font-size: 1.5rem;
@@ -211,7 +222,7 @@ main {
 
 .img-item-text h3 {
     display: inline-flex;
-    margin-top: 2rem;
+    margin-top: 1.8rem;
 }
 
 #section-title {
@@ -249,6 +260,8 @@ footer {
 
 .step-header {
     margin: 1rem 0 .5rem;
+    /* text-shadow: 2px 2px #000; */
+    color: black;
 }
 /* TEMPLATE */
 
@@ -318,7 +331,7 @@ footer {
     height: 50px;
     width: 50px;
     content: "";
-    /*! background-image: url(img/triangle.png); */
+    background-image: url(img/triangle.png);
     background-color: red;
     z-index: 100;
     opacity: 1;
@@ -329,21 +342,21 @@ footer {
   }
 
 [type=radio]:checked + img {
-    outline: 1.5px solid red;
+    outline: 3px solid #FF0000;
 }
   
-/* [type=radio]:checked + img::after {
+[type=radio]:checked + img::after {
     height: 50px;
     width: 50px;
     content: "";
     background-image: url(img/triangle.png);
-  } */
+  }
 
 .selection-icon {
     width: 35px;
     height: 35px;
     position: relative;
-    top: .9rem;
+    top: .8rem;
     left: .7rem;
 }
 
@@ -370,7 +383,7 @@ footer {
     margin-top: 3rem;
     /* padding: 2rem; */
 
-    /* display: none; */
+    display: none;
 }
 
 #profit-text {
@@ -504,11 +517,12 @@ footer {
       display: none;
       width: 80%;
       margin-top: 1rem;
-      font-size: 1.2rem;
+      font-size: 1.1rem;
+      font-family: 'svboldregular';
   }
   
   
-  @media only screen and (min-width: 375px) {
+  /* @media only screen and (min-width: 375px) {
     html {
         font-size: 110% !important;
     }
@@ -517,12 +531,11 @@ footer {
     margin-left: 5.8rem;
     margin-top: .5rem;
     margin-left: 5.3rem;
-    /* margin-top: .5rem; */
     display: flex;
     flex-direction: row;
     justify-content: space-between;  
     }
-  }
+  } */
 
 
 @media only screen and (orientation:landscape) {
